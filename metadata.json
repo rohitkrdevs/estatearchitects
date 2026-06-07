@@ -1,0 +1,6 @@
+{
+  "name": "Estate Architects",
+  "description": "Bespoke structural portfolios, structural narrative studios, and luxury client design platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

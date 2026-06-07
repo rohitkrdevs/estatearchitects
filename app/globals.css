@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Libre Caslon Text", "Playfair Display", Georgia, serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg-primary: #fbf9f8;
+  --color-brand-primary: #000000;
+  --color-brand-secondary: #7c6230;
+  --color-surface-card: #ffffff;
+  --color-surface-subtle: #f4f1ef;
+  --color-surface-neutral: #eae4e0;
+  --color-on-surface: #111111;
+  --color-on-surface-variant: #3a3d40;
+  --color-outline-variant: #cfc8c2;
+  
+  --animate-gold-glow: gold-glow 2s infinite alternate;
+}
+
+@keyframes gold-glow {
+  from {
+    box-shadow: 0 0 4px rgba(115, 90, 45, 0.2);
+  }
+  to {
+    box-shadow: 0 0 16px rgba(115, 90, 45, 0.4);
+  }
+}
+
+html, body {
+  background-color: #fbf9f8;
+  color: #1b1c1c;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Material Icons configuration */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll reveal helper classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keyframes for reverse spinning */
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 1.5s linear infinite;
+}

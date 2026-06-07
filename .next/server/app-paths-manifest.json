@@ -1,0 +1,6 @@
+{
+  "/customizer/page": "app/customizer/page.js",
+  "/inquiry/page": "app/inquiry/page.js",
+  "/lounge/page": "app/lounge/page.js",
+  "/page": "app/page.js"
+}
