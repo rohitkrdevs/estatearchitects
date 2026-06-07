@@ -22,7 +22,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { id: "portfolio", path: "/", label: "PORTFOLIO" },
+    { id: "home", path: "/", label: "HOME" },
+    { id: "studio", path: "/studio", label: "STUDIO" },
+    { id: "expertise", path: "/expertise", label: "EXPERTISE" },
+    { id: "projects", path: "/projects", label: "PROJECTS" },
     { id: "customizer", path: "/customizer", label: "DESIGN STUDIO" },
     { id: "lounge", path: "/lounge", label: "AI LOUNGE" },
     { id: "inquiry", path: "/inquiry", label: "INQUIRIES" },

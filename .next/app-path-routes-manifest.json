@@ -1,0 +1,12 @@
+{
+  "/api/gemini/brief/route": "/api/gemini/brief",
+  "/_not-found/page": "/_not-found",
+  "/customizer/page": "/customizer",
+  "/expertise/page": "/expertise",
+  "/projects/page": "/projects",
+  "/lounge/page": "/lounge",
+  "/inquiry/page": "/inquiry",
+  "/page": "/",
+  "/studio/page": "/studio",
+  "/project/[id]/page": "/project/[id]"
+}

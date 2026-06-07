@@ -1,6 +1,12 @@
 {
+  "/api/gemini/brief/route": "app/api/gemini/brief/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/customizer/page": "app/customizer/page.js",
-  "/inquiry/page": "app/inquiry/page.js",
+  "/expertise/page": "app/expertise/page.js",
+  "/projects/page": "app/projects/page.js",
   "/lounge/page": "app/lounge/page.js",
-  "/page": "app/page.js"
+  "/inquiry/page": "app/inquiry/page.js",
+  "/page": "app/page.js",
+  "/studio/page": "app/studio/page.js",
+  "/project/[id]/page": "app/project/[id]/page.js"
 }
