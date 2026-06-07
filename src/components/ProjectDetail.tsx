@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Grid, Calendar, ShieldCheck, MapPin } from "luci
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectDetailProps {
   projectId: string;
@@ -58,10 +59,12 @@ export default function ProjectDetail({ projectId }: ProjectDetailProps) {
 
         {/* Cinematic Header Illustration Hero */}
         <section className="relative h-[650px] w-full overflow-hidden bg-brand-primary">
-          <img
+          <Image
             src={project.image}
             alt={project.alt}
-            className="absolute inset-0 w-full h-full object-cover scale-105 origin-center brightness-90 shadow-inner"
+            fill
+            priority
+            className="object-cover scale-105 origin-center brightness-90 shadow-inner"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/85 via-brand-primary/20 to-transparent" />
           
@@ -228,11 +231,15 @@ export default function ProjectDetail({ projectId }: ProjectDetailProps) {
                 className="w-full bg-surface-subtle overflow-hidden border border-outline-variant/15"
                 id={`detail-gallery-container-${idx}`}
               >
-                <img
-                  src={img.url}
-                  alt={img.alt}
-                  className="w-full object-cover aspect-[4/3] md:aspect-[16/9] hover:scale-[1.02] transition-transform duration-[1000ms]"
-                />
+                <div className="relative w-full aspect-[4/3] md:aspect-[16/9]">
+                  <Image
+                    src={img.url}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 80vw"
+                    className="object-cover hover:scale-[1.02] transition-transform duration-[1000ms]"
+                  />
+                </div>
                 <div className="p-5 text-left bg-surface-card border-t border-outline-variant/15">
                   <p className="font-sans text-xs md:text-sm text-on-surface-variant italic">
                     {img.caption}
@@ -250,10 +257,11 @@ export default function ProjectDetail({ projectId }: ProjectDetailProps) {
           className="relative h-[550px] w-full flex items-center justify-center overflow-hidden bg-brand-primary cursor-pointer border-t border-white/10 group"
           id="detail-next-project-teaser"
         >
-          <img
+          <Image
             src={nextProject.image}
             alt={nextProject.alt}
-            className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-[1200ms] ease-out origin-center"
+            fill
+            className="object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-[1200ms] ease-out origin-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 to-transparent" />
           

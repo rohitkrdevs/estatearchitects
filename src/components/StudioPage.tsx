@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function StudioPage() {
   return (
@@ -30,12 +31,13 @@ export default function StudioPage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="w-full aspect-[4/5] bg-surface-subtle overflow-hidden border border-outline-variant/20"
+            className="relative w-full aspect-[4/5] bg-surface-subtle overflow-hidden border border-outline-variant/20"
           >
-            <img 
+            <Image 
               src="/studio_interior.png" 
-              alt="ESTATE ARCHITECTS Studio Interior" 
-              className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-[2000ms]"
+              alt="ESTATE ARCHITECTS Studio Interior"
+              fill
+              className="object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-[2000ms]"
             />
           </motion.div>
           

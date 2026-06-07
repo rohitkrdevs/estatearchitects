@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export interface ProductCardProps {
   id: string;
@@ -47,12 +48,13 @@ export default function ProductCard({
       id={`product-card-${id}`}
     >
       {/* Background image component with hover smooth scale */}
-      <img
+      <Image
         src={image}
         alt={alt || title}
+        fill
         referrerPolicy="no-referrer"
-        loading="lazy"
-        className="w-full h-full object-cover transition-all duration-[1200ms] ease-out scale-102 group-hover:scale-110 filter brightness-[0.7] group-hover:brightness-[0.45] pointer-events-none select-none"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover transition-all duration-[1200ms] ease-out scale-102 group-hover:scale-110 filter brightness-[0.7] group-hover:brightness-[0.45] pointer-events-none select-none"
       />
 
       {/* Modern Gradient Overlays */}

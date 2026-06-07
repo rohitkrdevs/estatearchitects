@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ExpertisePage() {
   const services = [
@@ -33,15 +34,20 @@ export default function ExpertisePage() {
       <section className="w-full py-24 bg-surface-subtle">
         <div className="max-w-[1280px] mx-auto w-full px-6 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="flex flex-col justify-center">
-            <motion.img
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.5 }}
-              src="/expertise_blueprint.png"
-              alt="Engineering Blueprint"
-              className="w-full aspect-square md:aspect-[4/3] object-cover border border-outline-variant/20"
-            />
+              className="relative w-full aspect-square md:aspect-[4/3] border border-outline-variant/20 overflow-hidden"
+            >
+              <Image
+                src="/expertise_blueprint.png"
+                alt="Engineering Blueprint"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
           </div>
           <div className="space-y-12 flex flex-col justify-center">
             {services.map((service, idx) => (
@@ -80,10 +86,11 @@ export default function ExpertisePage() {
            transition={{ duration: 1.5 }}
           className="w-full h-[60vh] relative overflow-hidden border-y border-outline-variant/15"
         >
-          <img 
+          <Image 
             src="/materials_abstract.png" 
             alt="Abstract Materials" 
-            className="w-full h-full object-cover" 
+            fill
+            className="object-cover" 
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
              <h2 className="font-serif text-3xl md:text-5xl text-white font-light tracking-wide text-center px-6">

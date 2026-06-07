@@ -7,6 +7,7 @@ import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import ProductCard from "./UI/ProductCard";
 import Button from "./UI/Button";
+import Image from "next/image";
 
 export default function HomePortfolio() {
   const router = useRouter();
@@ -242,10 +243,12 @@ export default function HomePortfolio() {
             className="relative h-[480px] md:h-[620px] w-full overflow-hidden border border-outline-variant/15"
           >
             <div className="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-brand-secondary/35 z-10" />
-            <img
+            <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMrpUp9GoZY9C3a7XZ8rTB8Ul4_KLK9m5fKbRjw6S1izlHj-sllWPktK7CkHpdf96jmY_fc7JYfHjv2QDl7WjgA_9je4FXVaIfX0-5hC5-5mzZnXYrZLbwd1A2UDDIxZ4wiEZjGZlc-OB_fGqFQ_4mvQs9tOl_MSEq0jCnanABoQLyNXDgQIUQOdkwHYPl3KJ1RMB0uA2VjMNPPu8oqxBrEvLDVurCFiOJgDhtB6Z34oLiLNxl8XE__Nddg-AO6MNBnKRypVUDa5A"
               alt="Interlocking material fins and shadow lines structure detail"
-              className="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-105"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-[2000ms] hover:scale-105"
             />
           </motion.div>
 
